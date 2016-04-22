@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2016/03/03/hello-world/</loc>
+    <loc>http://zongwenlong.github.io/2016/04/22/First-Test/</loc>
     
-    <lastmod>2016-03-03T15:22:46.261Z</lastmod>
+    <lastmod>2016-04-22T08:00:38.218Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zongwenlong.github.io/2016/04/18/hello-world/</loc>
+    
+    <lastmod>2016-03-03T15:22:46.000Z</lastmod>
     
   </url>
   
