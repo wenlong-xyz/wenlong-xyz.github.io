@@ -63,23 +63,25 @@
     <link href="http://zongwenlong.github.io/2015/08/01/OSCache%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE/"/>
     <id>http://zongwenlong.github.io/2015/08/01/OSCache分布式集群配置/</id>
     <published>2015-08-01T02:23:26.000Z</published>
-    <updated>2016-04-23T03:16:38.156Z</updated>
+    <updated>2016-04-23T03:41:48.981Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;OSCache简介&quot;&gt;&lt;a href=&quot;#OSCache简介&quot; class=&quot;headerlink&quot; title=&quot;OSCache简介&quot;&gt;&lt;/a&gt;OSCache简介&lt;/h1&gt;&lt;ul&gt;
+    <content type="html">&lt;h1 id=&quot;1-OSCache简介&quot;&gt;&lt;a href=&quot;#1-OSCache简介&quot; class=&quot;headerlink&quot; title=&quot;1. OSCache简介&quot;&gt;&lt;/a&gt;1. OSCache简介&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;缓存任何对象&lt;/li&gt;
 &lt;li&gt;永久缓存，缓存持久化处理&lt;/li&gt;
 &lt;li&gt;缓存记录的过期&lt;/li&gt;
-&lt;li&gt;支持集群（需要额外配置）&lt;br&gt;#&lt;br&gt;* adf &lt;/li&gt;
+&lt;li&gt;支持集群（需要额外配置）&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ZongWenlong/ZongWenlong.github.io/master/image/OSCache-cluster.png?raw=true&quot; width=&quot;300&quot;&gt;&lt;br&gt;&lt;/div&gt;
+
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;&lt;br&gt;&lt;/em&gt; 缓存记录的过期&lt;br&gt;* &lt;/p&gt;
+&lt;h1 id=&quot;2-OSCache-集群支持介绍&quot;&gt;&lt;a href=&quot;#2-OSCache-集群支持介绍&quot; class=&quot;headerlink&quot; title=&quot;2. OSCache 集群支持介绍&quot;&gt;&lt;/a&gt;2. OSCache 集群支持介绍&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;OScache自身不具备集群通信能力，它他需要借助第三方通讯工具来实现集群缓存数据同步。下图所示是OScache集群相关的Java类，其中类AbstractBroadcastingListener负责缓存同步事件的下发和处理，类ClusterNotification为组播消息体（Bean），类JavaGroupsBroadcastingListener,JMS10BroadcastingListening,JMSBroadcastingListening由OSCache官方提供，利用JGroups通信框架或JMS通信框架的组播能力实现OSCache的缓存数据同步需求。&lt;/p&gt;
+&lt;div align=&quot;center&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ZongWenlong/ZongWenlong.github.io/master/image/oscache-2.png?raw=true&quot; width=&quot;300&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ZongWenlong/ZongWenlong.github.io/master/image/oscache-3.png?raw=true&quot; width=&quot;300&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ZongWenlong/ZongWenlong.github.io/master/image/oscache-4.png?raw=true&quot; width=&quot;300&quot;&gt;&lt;br&gt;&lt;/div&gt;
 </content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;OSCache简介&quot;&gt;&lt;a href=&quot;#OSCache简介&quot; class=&quot;headerlink&quot; title=&quot;OSCache简介&quot;&gt;&lt;/a&gt;OSCache简介&lt;/h1&gt;&lt;ul&gt;
+      &lt;h1 id=&quot;1-OSCache简介&quot;&gt;&lt;a href=&quot;#1-OSCache简介&quot; class=&quot;headerlink&quot; title=&quot;1. OSCache简介&quot;&gt;&lt;/a&gt;1. OSCache简介&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;缓存任何对象&lt;/li&gt;
-&lt;li&gt;永久缓存，缓存持久化处理&lt;/li&gt;
-&lt;l
+&lt;li&gt;永久缓存，缓存持久化
     
     </summary>
     

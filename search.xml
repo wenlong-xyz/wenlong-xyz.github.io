@@ -27,13 +27,16 @@
     <entry>
       <title><![CDATA[OSCache分布式集群配置]]></title>
       <url>http://zongwenlong.github.io/2015/08/01/OSCache%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE/</url>
-      <content type="html"><![CDATA[<h1 id="OSCache简介"><a href="#OSCache简介" class="headerlink" title="OSCache简介"></a>OSCache简介</h1><ul>
+      <content type="html"><![CDATA[<h1 id="1-OSCache简介"><a href="#1-OSCache简介" class="headerlink" title="1. OSCache简介"></a>1. OSCache简介</h1><ul>
 <li>缓存任何对象</li>
 <li>永久缓存，缓存持久化处理</li>
 <li>缓存记录的过期</li>
-<li>支持集群（需要额外配置）<br>#<br>* adf </li>
+<li>支持集群（需要额外配置）<div align="center"><br><img src="https://raw.githubusercontent.com/ZongWenlong/ZongWenlong.github.io/master/image/OSCache-cluster.png?raw=true" width="300"><br></div>
+
+</li>
 </ul>
-<p><em><br></em> 缓存记录的过期<br>* </p>
+<h1 id="2-OSCache-集群支持介绍"><a href="#2-OSCache-集群支持介绍" class="headerlink" title="2. OSCache 集群支持介绍"></a>2. OSCache 集群支持介绍</h1><p>&emsp;&emsp;OScache自身不具备集群通信能力，它他需要借助第三方通讯工具来实现集群缓存数据同步。下图所示是OScache集群相关的Java类，其中类AbstractBroadcastingListener负责缓存同步事件的下发和处理，类ClusterNotification为组播消息体（Bean），类JavaGroupsBroadcastingListener,JMS10BroadcastingListening,JMSBroadcastingListening由OSCache官方提供，利用JGroups通信框架或JMS通信框架的组播能力实现OSCache的缓存数据同步需求。</p>
+<div align="center"><br><img src="https://raw.githubusercontent.com/ZongWenlong/ZongWenlong.github.io/master/image/oscache-2.png?raw=true" width="300"><br><img src="https://raw.githubusercontent.com/ZongWenlong/ZongWenlong.github.io/master/image/oscache-3.png?raw=true" width="300"><br><img src="https://raw.githubusercontent.com/ZongWenlong/ZongWenlong.github.io/master/image/oscache-4.png?raw=true" width="300"><br></div>
 ]]></content>
     </entry>
     
