@@ -628,7 +628,7 @@ div {
 /* syntax highlight*/
 figure.highlight,
 .codeblock {
-  background: #f7f8f8;
+  background: #EEEEEE;
   margin: 10px 0;
   line-height: 1.2em;
   color: #333;
@@ -673,7 +673,7 @@ figure.highlight,
       color: #01579f; }
   figure.highlight .gutter,
   .codeblock .gutter {
-    background: #f7f8f8;
+    background: #EEEEEE;
     border-right: 1px solid #e6e6e6;
     padding: 0.3em 15px; }
     figure.highlight .gutter .line,
