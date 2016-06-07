@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zongwenlong.github.io/about/index.html</loc>
+    
+    <lastmod>2016-06-07T14:50:54.105Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zongwenlong.github.io/2016/05/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</loc>
     
     <lastmod>2016-06-05T14:29:05.802Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>http://zongwenlong.github.io/2015/08/01/OSCache%E5%88%86%E5%B8%83%E5%BC%8F%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AE/</loc>
     
     <lastmod>2016-05-15T09:29:27.943Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zongwenlong.github.io/about/index.html</loc>
-    
-    <lastmod>2016-05-15T09:02:24.293Z</lastmod>
     
   </url>
   
