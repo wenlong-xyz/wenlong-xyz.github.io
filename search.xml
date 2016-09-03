@@ -86,6 +86,38 @@
     
     <entry>
       <title><![CDATA[Little Tips（持续更新）]]></title>
+      <url>http://zongwenlong.github.io/2016/05/25/Little-Tips%20(DESKTOP-VIGCSQ7%20%E7%9A%84%E5%86%B2%E7%AA%81%E5%89%AF%E6%9C%AC%202016-07-04)/</url>
+      <content type="html"><![CDATA[<p>&#x2003;&#x2003;&#x6536;&#x5F55;&#x4E00;&#x4E9B;&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x5C0F;&#x6280;&#x5DE7;</p>
+<h1 id="&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;"><a href="#&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;" class="headerlink" title="&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;"></a>&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"><span class="meta"># Linux &#x547D;&#x4EE4;</span></span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">&gt; fileName  <span class="meta">#&#x6587;&#x4EF6;&#x6E05;&#x7A7A;</span></span><br></pre></td></tr></table></figure>
+<h1 id="Code-Style-Just-one-of-the-many-styles"><a href="#Code-Style-Just-one-of-the-many-styles" class="headerlink" title="Code Style (Just one of the many styles)"></a>Code Style (Just one of the many styles)</h1><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><ul>
+<li>Source file structure<ul>
+<li>License or copyright information, if present</li>
+<li>Package statement</li>
+<li>Import statements<ul>
+<li>Wildcard imports, static or otherwise, are not used.</li>
+</ul>
+</li>
+<li>Exactly one top-level class</li>
+</ul>
+</li>
+<li>Braces<ul>
+<li>Braces(&#x82B1;&#x62EC;&#x53F7;) are used with if, else, for, do and while statements, even when the body is empty or contains only a single statement.</li>
+<li>No line break before the opening brace.</li>
+<li>Line break after the opening brace.</li>
+<li>Line break before the closing brace.</li>
+<li>Line break after the closing brace if that brace terminates a statement or the body of a method, constructor or named class. For example, there is no line break after the brace if it is followed by else or a comma.</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> MyClass() {</span><br><span class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (condition()) {</span><br><span class="line">      <span class="keyword">try</span> {</span><br><span class="line">        something();</span><br><span class="line">      } <span class="keyword">catch</span> (ProblemException e) {</span><br><span class="line">        recover();</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="https://google.github.io/styleguide/javaguide.html#s4.4-column-limit" target="_blank" rel="external">https://google.github.io/styleguide/javaguide.html#s4.4-column-limit</a><br><a href="https://google.github.io/styleguide/cppguide.html" target="_blank" rel="external">https://google.github.io/styleguide/cppguide.html</a></p>
+</blockquote>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Little Tips（持续更新）]]></title>
       <url>http://zongwenlong.github.io/2016/05/25/Little-Tips/</url>
       <content type="html"><![CDATA[<p>&#x2003;&#x2003;&#x6536;&#x5F55;&#x4E00;&#x4E9B;&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x5C0F;&#x6280;&#x5DE7;</p>
 <h1 id="&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;"><a href="#&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;" class="headerlink" title="&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;"></a>&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> mid = left + ((right - left) &gt;&gt; <span class="number">1</span>)   <span class="comment">// &#x4E8C;&#x5206;&#x6CD5;,&#x6CE8;&#x610F;&#x4FBF;&#x9762;&#x7684;&#x62EC;&#x53F7;</span></span><br><span class="line"><span class="keyword">int</span> mid = (left + right) / <span class="number">2</span>           <span class="comment">// &#xFF01;&#xFF01;&#xFF01;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5982;&#x679C;left&#x6216;right&#x5F88;&#x5927;&#xFF0C;&#x4E8C;&#x8005;&#x7684;&#x548C;&#x53EF;&#x80FD;&#x6EA2;&#x51FA;&#xFF0C;&#x4F46;mid&#x4E0D;&#x4F1A;&#x6EA2;&#x51FA;</span></span><br></pre></td></tr></table></figure>
@@ -114,38 +146,6 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> MyClass() {</span><br><span class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (condition()) {</span><br><span class="line">      <span class="keyword">try</span> {</span><br><span class="line">        something();</span><br><span class="line">      } <span class="keyword">catch</span> (ProblemException e) {</span><br><span class="line">        recover();</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><a href="https://google.github.io/styleguide/javaguide.html#s4.4-column-limit" target="_blank" rel="external">https://google.github.io/styleguide/javaguide.html#s4.4-column-limit</a></p>
-</blockquote>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Little Tips（持续更新）]]></title>
-      <url>http://zongwenlong.github.io/2016/05/25/Little-Tips%20(DESKTOP-VIGCSQ7%20%E7%9A%84%E5%86%B2%E7%AA%81%E5%89%AF%E6%9C%AC%202016-07-04)/</url>
-      <content type="html"><![CDATA[<p>&#x2003;&#x2003;&#x6536;&#x5F55;&#x4E00;&#x4E9B;&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x5C0F;&#x6280;&#x5DE7;</p>
-<h1 id="&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;"><a href="#&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;" class="headerlink" title="&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;"></a>&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x76F8;&#x5173;</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"><span class="meta"># Linux &#x547D;&#x4EE4;</span></span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">&gt; fileName  <span class="meta">#&#x6587;&#x4EF6;&#x6E05;&#x7A7A;</span></span><br></pre></td></tr></table></figure>
-<h1 id="Code-Style-Just-one-of-the-many-styles"><a href="#Code-Style-Just-one-of-the-many-styles" class="headerlink" title="Code Style (Just one of the many styles)"></a>Code Style (Just one of the many styles)</h1><h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><ul>
-<li>Source file structure<ul>
-<li>License or copyright information, if present</li>
-<li>Package statement</li>
-<li>Import statements<ul>
-<li>Wildcard imports, static or otherwise, are not used.</li>
-</ul>
-</li>
-<li>Exactly one top-level class</li>
-</ul>
-</li>
-<li>Braces<ul>
-<li>Braces(&#x82B1;&#x62EC;&#x53F7;) are used with if, else, for, do and while statements, even when the body is empty or contains only a single statement.</li>
-<li>No line break before the opening brace.</li>
-<li>Line break after the opening brace.</li>
-<li>Line break before the closing brace.</li>
-<li>Line break after the closing brace if that brace terminates a statement or the body of a method, constructor or named class. For example, there is no line break after the brace if it is followed by else or a comma.</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> MyClass() {</span><br><span class="line">  <span class="meta">@Override</span> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>{</span><br><span class="line">    <span class="keyword">if</span> (condition()) {</span><br><span class="line">      <span class="keyword">try</span> {</span><br><span class="line">        something();</span><br><span class="line">      } <span class="keyword">catch</span> (ProblemException e) {</span><br><span class="line">        recover();</span><br><span class="line">      }</span><br><span class="line">    }</span><br><span class="line">  }</span><br><span class="line">};</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><a href="https://google.github.io/styleguide/javaguide.html#s4.4-column-limit" target="_blank" rel="external">https://google.github.io/styleguide/javaguide.html#s4.4-column-limit</a><br><a href="https://google.github.io/styleguide/cppguide.html" target="_blank" rel="external">https://google.github.io/styleguide/cppguide.html</a></p>
 </blockquote>
 ]]></content>
     </entry>
