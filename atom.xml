@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zongwenlong.github.io/"/>
-  <updated>2016-09-04T02:28:38.881Z</updated>
+  <updated>2016-09-18T13:50:18.742Z</updated>
   <id>http://zongwenlong.github.io/</id>
   
   <author>
@@ -14,6 +14,126 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RESTful SpringMVC Swagger Demo</title>
+    <link href="http://zongwenlong.github.io/2016/09/18/RESTful-SpringMVC-Swagger-Demo/"/>
+    <id>http://zongwenlong.github.io/2016/09/18/RESTful-SpringMVC-Swagger-Demo/</id>
+    <published>2016-09-18T13:38:37.000Z</published>
+    <updated>2016-09-18T13:50:18.742Z</updated>
+    
+    <content type="html">&lt;p&gt;SpringMVC&amp;#x6846;&amp;#x67B6;&amp;#x642D;&amp;#x5EFA; RESTful &amp;#x98CE;&amp;#x683C;&amp;#x540E;&amp;#x7AEF;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x793A;&amp;#x4F8B;&lt;br&gt;&amp;#x6E90;&amp;#x7801;&amp;#xFF1A;&lt;a href=&quot;https://github.com/ZongWenlong/RESTful-SpringMVC-Swagger-Demo&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;RESTful-SpringMVC-Swagger-Demo&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;&amp;#x7B80;&amp;#x4ECB;&amp;#xFF1A;&quot;&gt;&lt;a href=&quot;#&amp;#x7B80;&amp;#x4ECB;&amp;#xFF1A;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x7B80;&amp;#x4ECB;&amp;#xFF1A;&quot;&gt;&lt;/a&gt;&amp;#x7B80;&amp;#x4ECB;&amp;#xFF1A;&lt;/h1&gt;&lt;h2 id=&quot;&amp;#x6D89;&amp;#x53CA;&amp;#x6846;&amp;#x67B6;&amp;#x6216;&amp;#x6570;&amp;#x636E;&amp;#x5E93;&quot;&gt;&lt;a href=&quot;#&amp;#x6D89;&amp;#x53CA;&amp;#x6846;&amp;#x67B6;&amp;#x6216;&amp;#x6570;&amp;#x636E;&amp;#x5E93;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x6D89;&amp;#x53CA;&amp;#x6846;&amp;#x67B6;&amp;#x6216;&amp;#x6570;&amp;#x636E;&amp;#x5E93;&quot;&gt;&lt;/a&gt;&amp;#x6D89;&amp;#x53CA;&amp;#x6846;&amp;#x67B6;&amp;#x6216;&amp;#x6570;&amp;#x636E;&amp;#x5E93;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;SpringMVC &amp;#x6846;&amp;#x67B6;&lt;/li&gt;
+&lt;li&gt;Spring &amp;#x6846;&amp;#x67B6;&lt;/li&gt;
+&lt;li&gt;MyBatis &amp;#x6846;&amp;#x67B6;&lt;/li&gt;
+&lt;li&gt;Log4j &amp;#x65E5;&amp;#x5FD7;&amp;#x6846;&amp;#x67B6;&lt;/li&gt;
+&lt;li&gt;MySQL &amp;#x6570;&amp;#x636E;&amp;#x5E93;&lt;/li&gt;
+&lt;li&gt;Redis &amp;#x6570;&amp;#x636E;&amp;#x5E93;&lt;/li&gt;
+&lt;li&gt;Swagger-UI API&amp;#x63A5;&amp;#x53E3;&amp;#x7BA1;&amp;#x7406;&amp;#x5DE5;&amp;#x5177;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Try-it&quot;&gt;&lt;a href=&quot;#Try-it&quot; class=&quot;headerlink&quot; title=&quot;Try it&quot;&gt;&lt;/a&gt;Try it&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&amp;#x5BFC;&amp;#x5165;&amp;#x9879;&amp;#x76EE;&amp;#x5230;&lt;code&gt;IDEA/Eclipse&lt;/code&gt;&amp;#x4E2D;&lt;/li&gt;
+&lt;li&gt;&amp;#x521D;&amp;#x59CB;&amp;#x5316;&amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#xFF0C;&amp;#x5BFC;&amp;#x5165;&lt;code&gt;tools/mysql-init.sql&lt;/code&gt;&amp;#x5230;MySQL&amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#xFF08;&amp;#x672C;&amp;#x793A;&amp;#x4F8B;&amp;#x4EC5;&amp;#x5305;&amp;#x542B;&amp;#x4E00;&amp;#x5F20;&amp;#x8868;&amp;#xFF0C;&amp;#x4E00;&amp;#x6761;&amp;#x8BB0;&amp;#x5F55;&amp;#xFF09;&lt;/li&gt;
+&lt;li&gt;&amp;#x914D;&amp;#x7F6E;MySQL&amp;#x548C;Redis&amp;#xFF0C;&amp;#x4FEE;&amp;#x6539;&lt;code&gt;src//main/resource/database.properties&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;mysql.url&lt;/li&gt;
+&lt;li&gt;mysql.username&lt;/li&gt;
+&lt;li&gt;mysql.password&lt;/li&gt;
+&lt;li&gt;redis.host&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&amp;#x4FEE;&amp;#x6539;&lt;code&gt;src/main/webapp/WEB-INF/swagger-ui/index.html&lt;/code&gt;&lt;/p&gt;
+ &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;url = &amp;quot;http://localhost:8888/api-docs&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#x4FEE;&amp;#x6539;&amp;#x4E3A;&amp;#xFF1A;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;url = &amp;quot;http://ip:port/{&amp;#x9879;&amp;#x76EE;&amp;#x540D;}/api-docs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&amp;#x542F;&amp;#x52A8;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x6D4F;&amp;#x89C8;&amp;#x5668;&amp;#x4E2D;&amp;#x67E5;&amp;#x770B;&lt;code&gt;http://ip:port/{&amp;#x9879;&amp;#x76EE;&amp;#x540D;}/swagger/index.html&lt;/code&gt;&amp;#x9875;&amp;#x9762;&amp;#x663E;&amp;#x793A;&amp;#x5982;&amp;#x4E0B;&amp;#xFF1A; &lt;img src=&quot;https://github.com/ZongWenlong/Demos/blob/master/images/swagger/api-examples.PNG&quot; alt=&quot;image&quot;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;&amp;#x5177;&amp;#x4F53;&amp;#x8BF4;&amp;#x660E;&amp;#xFF1A;&quot;&gt;&lt;a href=&quot;#&amp;#x5177;&amp;#x4F53;&amp;#x8BF4;&amp;#x660E;&amp;#xFF1A;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x5177;&amp;#x4F53;&amp;#x8BF4;&amp;#x660E;&amp;#xFF1A;&quot;&gt;&lt;/a&gt;&amp;#x5177;&amp;#x4F53;&amp;#x8BF4;&amp;#x660E;&amp;#xFF1A;&lt;/h1&gt;&lt;h2 id=&quot;&amp;#x8BF7;&amp;#x6C42;&amp;#x54CD;&amp;#x5E94;&amp;#x8FC7;&amp;#x7A0B;&quot;&gt;&lt;a href=&quot;#&amp;#x8BF7;&amp;#x6C42;&amp;#x54CD;&amp;#x5E94;&amp;#x8FC7;&amp;#x7A0B;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x8BF7;&amp;#x6C42;&amp;#x54CD;&amp;#x5E94;&amp;#x8FC7;&amp;#x7A0B;&quot;&gt;&lt;/a&gt;&amp;#x8BF7;&amp;#x6C42;&amp;#x54CD;&amp;#x5E94;&amp;#x8FC7;&amp;#x7A0B;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x767B;&amp;#x5F55;&amp;#xFF1A;&amp;#x8BF7;&amp;#x6C42;&amp;#x4E2D;&amp;#x643A;&amp;#x5E26;&amp;#x7528;&amp;#x6237;&amp;#x540D;&amp;#x5BC6;&amp;#x7801;&amp;#xFF0C;&amp;#x83B7;&amp;#x53D6;Token, &amp;#x4E3A;&amp;#x7B80;&amp;#x5355;&amp;#x8D77;&amp;#x89C1;&amp;#x672C;&amp;#x793A;&amp;#x4F8B;&amp;#x53EA;&amp;#x8981;&amp;#x7528;&amp;#x6237;&amp;#x540D;&amp;#x548C;&amp;#x5BC6;&amp;#x7801;&amp;#x76F8;&amp;#x540C;&amp;#x5219;&amp;#x9A8C;&amp;#x8BC1;&amp;#x901A;&amp;#x8FC7;&lt;ul&gt;
+&lt;li&gt;Token&lt;ul&gt;
+&lt;li&gt;&amp;#x51ED;&amp;#x8BC1;&amp;#x4FE1;&amp;#x606F;&amp;#xFF0C;&amp;#x7528;&amp;#x6237;&amp;#x5728;&amp;#x4E4B;&amp;#x540E;&amp;#x7684;&amp;#x8BF7;&amp;#x6C42;&amp;#x4E2D;&amp;#x7528;Token&amp;#x4E2D;&amp;#x7684;&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x4EE3;&amp;#x66FF;&amp;#x5BC6;&amp;#x7801;&amp;#x4F9B;&amp;#x9274;&amp;#x6743;&amp;#x4F7F;&amp;#x7528;&amp;#xFF0C;&amp;#x5E76;&amp;#x6709;&amp;#x4E00;&amp;#x5B9A;&amp;#x7684;&amp;#x4F7F;&amp;#x7528;&amp;#x671F;&amp;#x9650;&lt;/li&gt;
+&lt;li&gt;&amp;#x4E3A;&amp;#x52A0;&amp;#x901F;&amp;#x67E5;&amp;#x8BE2;&amp;#xFF0C;Token&amp;#x5B57;&amp;#x7B26;&amp;#x4E32;&amp;#x5B58;&amp;#x50A8;&amp;#x5728;Redis&amp;#x4E2D;&amp;#xFF0C;&amp;#x5B58;&amp;#x50A8;&amp;#x683C;&amp;#x5F0F;&amp;#x4E3A;Key-Value&amp;#xFF08;name-tokenStr&amp;#xFF09;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x9274;&amp;#x6743;&amp;#xFF1A;&amp;#x9664;&amp;#x767B;&amp;#x5F55;&amp;#x5916;&amp;#x7684;&amp;#x5176;&amp;#x4ED6;&amp;#x64CD;&amp;#x4F5C;&amp;#x539F;&amp;#x5219;&amp;#x4E0A;&amp;#x5747;&amp;#x9700;&amp;#x8981;&amp;#x7ECF;&amp;#x8FC7;&amp;#x9274;&amp;#x6743;&amp;#x624D;&amp;#x80FD;&amp;#x4F7F;&amp;#x7528;&amp;#x7CFB;&amp;#x7EDF;&amp;#x7684;API&lt;ul&gt;
+&lt;li&gt;&amp;#x672C;&amp;#x793A;&amp;#x4F8B;&amp;#x4E2D;&amp;#x5229;&amp;#x7528;&amp;#x62E6;&amp;#x622A;&amp;#x5668;&lt;code&gt;src/java/pers/well/interceptor/AuthorizationInterceptor&lt;/code&gt;&amp;#x62E6;&amp;#x622A;&amp;#x8BF7;&amp;#x6C42;&amp;#xFF0C;&amp;#x8FDB;&amp;#x884C;Token&amp;#x6B63;&amp;#x786E;&amp;#x6027;&amp;#x9A8C;&amp;#x8BC1;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;AuthorizationInterceptor&lt;/code&gt; &amp;#x5728;&lt;code&gt;src/main/resource/spring-mvc.xml&lt;/code&gt;&amp;#x4E2D;&amp;#x914D;&amp;#x7F6E;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;&amp;#x63A5;&amp;#x53E3;&amp;#x8BF4;&amp;#x660E;&quot;&gt;&lt;a href=&quot;#&amp;#x63A5;&amp;#x53E3;&amp;#x8BF4;&amp;#x660E;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x63A5;&amp;#x53E3;&amp;#x8BF4;&amp;#x660E;&quot;&gt;&lt;/a&gt;&amp;#x63A5;&amp;#x53E3;&amp;#x8BF4;&amp;#x660E;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x793A;&amp;#x4F8B;&amp;#x4E2D;&amp;#x6709;&amp;#x4E09;&amp;#x4E2A;&amp;#x63A5;&amp;#x53E3;&amp;#xFF1A;/login, /student, token/student&lt;/li&gt;
+&lt;li&gt;/login&lt;ul&gt;
+&lt;li&gt;&amp;#x8BF7;&amp;#x6C42;&amp;#x4E2D;&amp;#x643A;&amp;#x5E26;&amp;#x7528;&amp;#x6237;&amp;#x540D;&amp;#x5BC6;&amp;#x7801;&amp;#xFF0C;&amp;#x83B7;&amp;#x53D6;Token&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/student&lt;ul&gt;
+&lt;li&gt;&amp;#x65E0;token&amp;#x793A;&amp;#x4F8B;&amp;#xFF0C;&amp;#x63D0;&amp;#x4F9B;&amp;#x7B80;&amp;#x5355;&amp;#x7684;id&amp;#x53C2;&amp;#x6570;&amp;#x5373;&amp;#x53EF;&amp;#x8FDB;&amp;#x884C;&amp;#x67E5;&amp;#x8BE2;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;/token/student&lt;ul&gt;
+&lt;li&gt;&amp;#x9700;&amp;#x8981;&amp;#x9274;&amp;#x6743;&amp;#x7684;&amp;#x63A5;&amp;#x53E3;&amp;#x793A;&amp;#x4F8B;&amp;#xFF0C;&amp;#x5FC5;&amp;#x987B;&amp;#x643A;&amp;#x5E26;&amp;#x6B63;&amp;#x786E;&amp;#x7684;token&amp;#x548C;username&amp;#xFF0C;&amp;#x5426;&amp;#x5219;&amp;#x9274;&amp;#x6743;&amp;#x5931;&amp;#x8D25;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;&amp;#x90E8;&amp;#x5206;&amp;#x914D;&amp;#x7F6E;&amp;#x9879;&amp;#x8BF4;&amp;#x660E;&quot;&gt;&lt;a href=&quot;#&amp;#x90E8;&amp;#x5206;&amp;#x914D;&amp;#x7F6E;&amp;#x9879;&amp;#x8BF4;&amp;#x660E;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x90E8;&amp;#x5206;&amp;#x914D;&amp;#x7F6E;&amp;#x9879;&amp;#x8BF4;&amp;#x660E;&quot;&gt;&lt;/a&gt;&amp;#x90E8;&amp;#x5206;&amp;#x914D;&amp;#x7F6E;&amp;#x9879;&amp;#x8BF4;&amp;#x660E;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;src/main/resource/&lt;/code&gt;&amp;#x76EE;&amp;#x5F55;&amp;#xFF1A;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;database.properties: &amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#x76F8;&amp;#x5173;&amp;#x914D;&amp;#x7F6E;&lt;/li&gt;
+&lt;li&gt;log4j.properties: log4j&amp;#x65E5;&amp;#x5FD7;&amp;#x914D;&amp;#x7F6E;&lt;/li&gt;
+&lt;li&gt;mybatis-config.xml: mybatis&amp;#x5206;&amp;#x9875;&amp;#x63D2;&amp;#x4EF6;&amp;#x7B49;&amp;#x76F8;&amp;#x5173;&amp;#x914D;&amp;#x7F6E;&lt;/li&gt;
+&lt;li&gt;spring.xml: redis&amp;#x7B49;&amp;#x914D;&amp;#x7F6E;&lt;/li&gt;
+&lt;li&gt;spring-mvc.xml&amp;#xFF1A; springmvc&amp;#x914D;&amp;#x7F6E;&lt;/li&gt;
+&lt;li&gt;spring-mybatis.xml: spring,mybatis&amp;#x6574;&amp;#x5408;&amp;#x914D;&amp;#x7F6E;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;Swagger-UI&amp;#x8BF4;&amp;#x660E;&quot;&gt;&lt;a href=&quot;#Swagger-UI&amp;#x8BF4;&amp;#x660E;&quot; class=&quot;headerlink&quot; title=&quot;Swagger-UI&amp;#x8BF4;&amp;#x660E;&quot;&gt;&lt;/a&gt;Swagger-UI&amp;#x8BF4;&amp;#x660E;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;SpringMVC&amp;#x9879;&amp;#x76EE;&amp;#x4E2D;&amp;#x5F15;&amp;#x5165;Swagger&amp;#x7684;&amp;#x4E3B;&amp;#x8981;&amp;#x6B65;&amp;#x9AA4;&amp;#xFF1A;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;#x6DFB;&amp;#x52A0;&amp;#x4E2A;&amp;#x6027;&amp;#x5316;&amp;#x914D;&amp;#x7F6E;&amp;#xFF1A;&lt;code&gt;src/java/pers/well/config/SwaggerConfig.java&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Copy Swagger-UI&amp;#x754C;&amp;#x9762;&amp;#x90E8;&amp;#x5206;&lt;a href=&quot;https://github.com/swagger-api/swagger-ui/tree/master/dist&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;SWagger-UI&lt;/a&gt; &amp;#x5230;&lt;code&gt;webapp/WEB-INF/swagger-ui&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Spring&amp;#x914D;&amp;#x7F6E;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;bean class=&amp;quot;pers.well.config.SwaggerConfig&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;mvc:resources mapping=&amp;quot;/swagger/**&amp;quot; location=&amp;quot;/WEB-INF/swagger-ui/&amp;quot;/&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Controller&amp;#x4E2D;&amp;#x53EF;&amp;#x4EE5;&amp;#x81EA;&amp;#x4E3B;&amp;#x6DFB;&amp;#x52A0;&amp;#x914D;&amp;#x7F6E;&amp;#xFF0C;&amp;#x66F4;&amp;#x597D;&amp;#x7684;&amp;#x663E;&amp;#x793A;API&amp;#xFF1A;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;@API&lt;/li&gt;
+&lt;li&gt;@ApiOperation&lt;/li&gt;
+&lt;li&gt;@ApiModel&lt;/li&gt;
+&lt;li&gt;@ApiModelProperty&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;#x4E3B;&amp;#x8981;&amp;#x53C2;&amp;#x8003;&amp;#xFF1A;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/albertchendao/demos/tree/master/java/spring/HelloWorld-MVC-Swagger&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;HelloWorld-MVC-Swagger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.javacodegeeks.com/2013/10/swagger-make-developers-love-working-with-your-rest-api.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Swagger: make developers love working with your REST API&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;&amp;#x5176;&amp;#x4ED6;&amp;#x8BF4;&amp;#x660E;&amp;#xFF1A;&quot;&gt;&lt;a href=&quot;#&amp;#x5176;&amp;#x4ED6;&amp;#x8BF4;&amp;#x660E;&amp;#xFF1A;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x5176;&amp;#x4ED6;&amp;#x8BF4;&amp;#x660E;&amp;#xFF1A;&quot;&gt;&lt;/a&gt;&amp;#x5176;&amp;#x4ED6;&amp;#x8BF4;&amp;#x660E;&amp;#xFF1A;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;MyBatisGeneratorConfig.xml MyBatis&amp;#x4EE3;&amp;#x7801;&amp;#x81EA;&amp;#x52A8;&amp;#x751F;&amp;#x6210;&amp;#x5668;&amp;#x914D;&amp;#x7F6E;&amp;#xFF0C;&amp;#x53EF;&amp;#x4EE5;&amp;#x6839;&amp;#x636E;&amp;#x6570;&amp;#x636E;&amp;#x5E93;&amp;#x8868;&amp;#x4FE1;&amp;#x606F;&amp;#x81EA;&amp;#x52A8;&amp;#x53CD;&amp;#x5411;&amp;#x751F;&amp;#x6210;MyBatis Mapper&amp;#x7B49;&amp;#x6587;&amp;#x4EF6;&amp;#xFF0C;&amp;#x8BE6;&amp;#x7EC6;&amp;#x8BF4;&amp;#x660E;&amp;#x89C1; &lt;a href=&quot;http://generator.sturgeon.mopaas.com/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MyBatis Generator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringMVC&amp;#x6846;&amp;#x67B6;&amp;#x642D;&amp;#x5EFA; RESTful &amp;#x98CE;&amp;#x683C;&amp;#x540E;&amp;#x7AEF;&amp;#x670D;&amp;#x52A1;&amp;#x5668;&amp;#x793A;&amp;#x4F8B;&lt;br&gt;&amp;#x6E90;&amp;#x
+    
+    </summary>
+    
+      <category term="Technology" scheme="http://zongwenlong.github.io/categories/Technology/"/>
+    
+    
+      <category term="RESTful" scheme="http://zongwenlong.github.io/tags/RESTful/"/>
+    
+  </entry>
   
   <entry>
     <title>西藏游记（六人七天）</title>
