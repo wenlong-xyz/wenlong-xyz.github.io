@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zongwenlong.github.io/"/>
-  <updated>2017-02-26T14:44:05.417Z</updated>
+  <updated>2017-02-26T14:47:12.394Z</updated>
   <id>http://zongwenlong.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://zongwenlong.github.io/2017/02/26/ReadingNotes-JavaConcurrencyInPractice/"/>
     <id>http://zongwenlong.github.io/2017/02/26/ReadingNotes-JavaConcurrencyInPractice/</id>
     <published>2017-02-26T14:29:52.000Z</published>
-    <updated>2017-02-26T14:44:05.417Z</updated>
+    <updated>2017-02-26T14:47:12.394Z</updated>
     
-    <content type="html">&lt;p&gt;&amp;#x2003;&amp;#x2003;&amp;#x5BD2;&amp;#x5047;&amp;#x5728;&amp;#x5BB6;&amp;#x8BA4;&amp;#x771F;&amp;#x9605;&amp;#x8BFB;&amp;#x4E86;&lt;a href=&quot;https://www.amazon.cn/~/dp/B0077K9XHW/ref=sr_1_1?ie=UTF8&amp;amp;qid=1488119648&amp;amp;sr=8-1&amp;amp;keywords=java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&amp;#x300A;Java&amp;#x5E76;&amp;#x53D1;&amp;#x7F16;&amp;#x7A0B;&amp;#x5B9E;&amp;#x6218;&amp;#x300B;&amp;#xFF08;&amp;#x82F1;&amp;#x6587;&amp;#x540D;&amp;#xFF1A;Java Concurrency in Practice) &lt;/a&gt;&amp;#x4E00;&amp;#x4E66;&amp;#xFF0C;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;&amp;#x78B0;&amp;#x5230;&amp;#x4E86;&amp;#x8BB8;&amp;#x591A;&amp;#x95EE;&amp;#x9898;&amp;#x548C;&amp;#x503C;&amp;#x5F97;&amp;#x6DF1;&amp;#x7A76;&amp;#x7684;&amp;#x5730;&amp;#x65B9;&amp;#x3002;&amp;#x5728;&amp;#x5B9E;&amp;#x9645;&amp;#x7F16;&amp;#x7A0B;&amp;#x5B9E;&amp;#x8DF5;&amp;#x7684;&amp;#x540C;&amp;#x65F6;&amp;#xFF0C;&amp;#x968F;&amp;#x624B;&amp;#x5C06;&amp;#x4E2A;&amp;#x4EBA;&amp;#x7591;&amp;#x60D1;&amp;#x7684;&amp;#x77E5;&amp;#x8BC6;&amp;#x70B9;&amp;#x901A;&amp;#x8FC7;&amp;#x67E5;&amp;#x8BE2;&amp;#x76F8;&amp;#x5173;&amp;#x8D44;&amp;#x6599;&amp;#x8FDB;&amp;#x884C;&amp;#x8865;&amp;#x5145;&amp;#x8BF4;&amp;#x660E;&amp;#xFF0C;&amp;#x6574;&amp;#x7406;&amp;#x5230;&amp;#x4E86;GitHub&amp;#x4E0A;&amp;#x3002;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&amp;#x2003;&amp;#x2003;&amp;#x5BD2;&amp;#x5047;&amp;#x5728;&amp;#x5BB6;&amp;#x8BA4;&amp;#x771F;&amp;#x9605;&amp;#x8BFB;&amp;#x4E86;&lt;a href=&quot;https://www.amazon.cn/~/dp/B0077K9XHW/ref=sr_1_1?ie=UTF8&amp;amp;qid=1488119648&amp;amp;sr=8-1&amp;amp;keywords=java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%AE%9E%E6%88%98&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;&amp;#x300A;Java&amp;#x5E76;&amp;#x53D1;&amp;#x7F16;&amp;#x7A0B;&amp;#x5B9E;&amp;#x6218;&amp;#x300B;&amp;#xFF08;&amp;#x82F1;&amp;#x6587;&amp;#x540D;&amp;#xFF1A;Java Concurrency in Practice) &lt;/a&gt;&amp;#x4E00;&amp;#x4E66;&amp;#xFF0C;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;&amp;#x78B0;&amp;#x5230;&amp;#x4E86;&amp;#x8BB8;&amp;#x591A;&amp;#x95EE;&amp;#x9898;&amp;#x548C;&amp;#x503C;&amp;#x5F97;&amp;#x6DF1;&amp;#x7A76;&amp;#x7684;&amp;#x5185;&amp;#x5BB9;&amp;#x3002;&amp;#x5728;&amp;#x5B9E;&amp;#x9645;&amp;#x7F16;&amp;#x7A0B;&amp;#x5B9E;&amp;#x8DF5;&amp;#x7684;&amp;#x540C;&amp;#x65F6;&amp;#xFF0C;&amp;#x968F;&amp;#x624B;&amp;#x5C06;&amp;#x4E2A;&amp;#x4EBA;&amp;#x7591;&amp;#x60D1;&amp;#x7684;&amp;#x77E5;&amp;#x8BC6;&amp;#x70B9;&amp;#x901A;&amp;#x8FC7;&amp;#x67E5;&amp;#x8BE2;&amp;#x76F8;&amp;#x5173;&amp;#x8D44;&amp;#x6599;&amp;#x8FDB;&amp;#x884C;&amp;#x8865;&amp;#x5145;&amp;#x8BF4;&amp;#x660E;&amp;#xFF0C;&amp;#x6574;&amp;#x7406;&amp;#x5230;&amp;#x4E86;GitHub&amp;#x4E0A;&amp;#x3002;&lt;/p&gt;
 &lt;h2 id=&quot;&amp;#x7B14;&amp;#x8BB0;&amp;#x76EE;&amp;#x5F55;&quot;&gt;&lt;a href=&quot;#&amp;#x7B14;&amp;#x8BB0;&amp;#x76EE;&amp;#x5F55;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x7B14;&amp;#x8BB0;&amp;#x76EE;&amp;#x5F55;&quot;&gt;&lt;/a&gt;&amp;#x7B14;&amp;#x8BB0;&amp;#x76EE;&amp;#x5F55;&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ZongWenlong/JavaLab/tree/master/src/main/java/multithread/tools/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java Concurrent Tools Class &amp;#x5E76;&amp;#x53D1;&amp;#x5DE5;&amp;#x5177;&amp;#x7C7B;+&amp;#x81EA;&amp;#x5B9A;&amp;#x4E49;&amp;#x540C;&amp;#x6B65;&amp;#x5DE5;&amp;#x5177;&amp;#xFF08;&amp;#x975E;&amp;#x963B;&amp;#x585E;&amp;#x7B97;&amp;#x6CD5;&amp;#x7B49;&amp;#xFF09;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ZongWenlong/JavaLab/tree/master/src/main/java/multithread/task/executor&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java Task Execution &amp;#x4EFB;&amp;#x52A1;&amp;#x7684;&amp;#x6267;&amp;#x884C;&lt;/a&gt;&lt;/li&gt;
@@ -40,6 +40,10 @@
     
       <category term="Technology" scheme="http://zongwenlong.github.io/categories/Technology/"/>
     
+    
+      <category term="多线程" scheme="http://zongwenlong.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+      <category term="并发，Java" scheme="http://zongwenlong.github.io/tags/%E5%B9%B6%E5%8F%91%EF%BC%8CJava/"/>
     
   </entry>
   
@@ -463,11 +467,11 @@
       <category term="Technology" scheme="http://zongwenlong.github.io/categories/Technology/"/>
     
     
+      <category term="设计模式" scheme="http://zongwenlong.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
       <category term="并发" scheme="http://zongwenlong.github.io/tags/%E5%B9%B6%E5%8F%91/"/>
     
       <category term="多线程" scheme="http://zongwenlong.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-      <category term="设计模式" scheme="http://zongwenlong.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
