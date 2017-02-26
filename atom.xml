@@ -43,9 +43,9 @@
     
       <category term="Java" scheme="http://zongwenlong.github.io/tags/Java/"/>
     
-      <category term="多线程" scheme="http://zongwenlong.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
       <category term="并发" scheme="http://zongwenlong.github.io/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="多线程" scheme="http://zongwenlong.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
@@ -471,9 +471,9 @@
     
       <category term="设计模式" scheme="http://zongwenlong.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-      <category term="多线程" scheme="http://zongwenlong.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
       <category term="并发" scheme="http://zongwenlong.github.io/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+      <category term="多线程" scheme="http://zongwenlong.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
