@@ -1,0 +1,58 @@
+fancybox: true ## If you want to use fancybox please set the value to true.
+duoshuo: ## Your duoshuo_shortname, e.g. username
+disqus: http-zongwenlong-github-io ## Your disqus_shortname, e.g. username
+google_search: ## Use Google search, true/false.
+baidu_search: ## Use Baidu search, true/false.
+swiftype: ## Your swiftype_key, e.g. m7b11ZrsT8Me7gzApciT
+tinysou: ## Your tinysou_key, e.g. 4ac092ad8d749fdc6293
+self_search: true ## Use a jQuery-based local search engine, true/false.
+google_analytics:  UA-77720589-1 ## Your Google Analytics tracking id, e.g. UA-42425684-2
+baidu_analytics: 28aa9a092a9c1d26ba2a3b5d6f2c7c60 ## Your Baidu Analytics tracking id, e.g. 8006843039519956000
+shareto: true ## If you want to use the share button please set the value to true.
+busuanzi: true ## If you want to use Busuanzi page views please set the value to true.
+
+menu:
+  - page: home
+    directory: .
+    icon: fa-home
+  - page: archive
+    directory: archives/
+    icon: fa-archive
+  - page: tools
+    directory: tools/
+    icon: fa-cog
+  - page: 未来
+    directory: future/
+    icon: fa-heart
+  - page: about
+    directory: about/
+    icon: fa-user
+  - page: rss
+    directory: atom.xml
+    icon: fa-rss
+
+widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
+  - search
+  - category
+  - tag
+  - recent_posts
+  - recent_comments
+  - links
+
+links:
+  - title: GitHub
+    url: http://github.com/
+  - title: Maupassant
+    url: https://www.haomwei.com/technology/maupassant-hexo.html
+
+# Static files
+js: js
+css: css
+
+# Theme version
+version: 0.0.0
+
+# 站内搜索
+search:
+  - path: search.xml
+  - field: post
