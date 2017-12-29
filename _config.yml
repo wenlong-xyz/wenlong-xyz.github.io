@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: All is well 
+title: All is well
 subtitle: Learn & Cope
 description:
 author: Wenlong Zong
@@ -71,3 +71,12 @@ deploy:
   type: git
   repository: https://github.com/ZongWenlong/ZongWenlong.github.io.git
   branch: master
+
+douban:
+  user: 60887154
+  book:
+    title: '读书'
+    quote: '一路走来一路读'
+  movie:
+    title: '电影'
+    quote: '走走停停，停停看看'

@@ -18,9 +18,12 @@ menu:
   - page: archive
     directory: archives/
     icon: fa-archive
-  - page: tools
-    directory: tools/
-    icon: fa-cog
+  - page: movies
+    directory: movies/
+    icon: fa-video-camera
+  - page: books
+    directory: books/
+    icon: fa-book
   - page: 未来
     directory: future/
     icon: fa-heart
