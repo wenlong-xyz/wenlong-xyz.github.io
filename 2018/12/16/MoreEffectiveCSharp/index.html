@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>More Effective CSharp Notes | All is well</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">More Effective CSharp Notes</h1><a id="logo" href="/.">All is well</a><p class="description">Learn &amp; Cope</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/movies/"><i class="fa fa-video-camera"> 电影</i></a><a href="/books/"><i class="fa fa-book"> 读书</i></a><a href="/future/"><i class="fa fa-heart"> 未来</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">More Effective CSharp Notes</h1><div class="post-meta">Dec 16, 2018<span> | </span><span class="category"><a href="/categories/Technology/">Technology</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><a data-disqus-identifier="2018/12/16/MoreEffectiveCSharp/" href="/2018/12/16/MoreEffectiveCSharp/#disqus_thread" class="disqus-comment-count"></a><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Working-with-Data-Types"><span class="toc-number">1.</span> <span class="toc-text">Working with Data Types</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Item-9-Equality"><span class="toc-number">1.1.</span> <span class="toc-text">Item 9: Equality</span></a></li></ol></li></ol></div></div><div class="post-content"><p>&lt;<more effective="" c#="">&gt;笔记</more></p>
+<h1 id="Working-with-Data-Types"><a href="#Working-with-Data-Types" class="headerlink" title="Working with Data Types"></a>Working with Data Types</h1><h2 id="Item-9-Equality"><a href="#Item-9-Equality" class="headerlink" title="Item 9: Equality"></a>Item 9: Equality</h2><ol>
+<li><code>public static bool ReferenceEquals(object left, object right);</code><ul>
+<li>Never redefine</li>
+<li>Return true: same reference identity</li>
+<li>Specially, return false when compare two value type variable(due to boxing)</li>
+</ul>
+</li>
+<li><code>public static bool Equals(object left, object right);</code><ul>
+<li>Never redefine</li>
+<li>Call <code>ReferenceEquals</code> and instance <code>Equals()</code> to comapre two object instances</li>
+</ul>
+</li>
+<li><p><code>public virtual bool Equals(object right);</code></p>
+<ul>
+<li>Equality<ul>
+<li>reflexive: a == a</li>
+<li>symmetric: a == b <--> b == a</--></li>
+<li>transitive: a == b, b == c –&gt; a == c</li>
+</ul>
+</li>
+<li>Default<ul>
+<li>Reference type: same with <code>Object.ReferenceEquals()</code></li>
+<li>Value type: have been override by <code>System.ValueType</code>, but we should create an override of <code>ValueType.Equals()</code> when we create a value type.</li>
+</ul>
+</li>
+<li>How to override<ul>
+<li>Impliment <code>IEquatable&lt;T&gt;</code></li>
+<li>Impliment <code>GetHashCode()</code><ul>
+<li>Equal objects must produce equal hash codes</li>
+<li>Hash code must be object invariants</li>
+<li>Must produce an even distribution to be efficient</li>
+</ul>
+</li>
+<li>Standard pattern<figure class="highlight cs"><table><tr><td class="code"><pre><span class="line">public class Foo : IEquatable&lt;Foo&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">bool</span> <span class="title">Equals</span>(<span class="params"><span class="keyword">object</span> right</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">// Check null:</span></span><br><span class="line">        <span class="comment">// This reference is never null in C# methods</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">object</span>.ReferenceEquals(right, <span class="literal">null</span>))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">object</span>.ReferenceEquals(<span class="keyword">this</span>, right))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// To handle inheritance hierarchy problem</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.GetType() != right.GetType())</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Compare this type's contents here:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.Equals(right <span class="keyword">as</span> Foo);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// IEquatable&lt;Foo&gt; Members</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">Equals</span>(<span class="params">Foo other</span>)</span></span><br><span class="line"><span class="function"></span>    &#123;</span><br><span class="line">        <span class="comment">// Elided: this.x == other.x &amp;&amp; this.y == other.y, etc.</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>public static bool operator ==(MyClass left, MyClass right);</code></p>
+<ul>
+<li>Redefine for value type, not reference type</li>
+</ul>
+</li>
+</ol>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://zongwenlong.github.io/2018/12/16/MoreEffectiveCSharp/" data-id="cjpr0qffb0020oksv9rhydg9y" class="article-share-link">分享到</a><div class="tags"><a href="/tags/C/">C#</a><a href="/tags/编程语言/">编程语言</a></div><div class="post-nav"><a href="/2018/05/01/CSharpRampUp/" class="next">C# Ramp Up</a></div><div id="disqus_thread"><script>var disqus_shortname = 'http-zongwenlong-github-io';
+var disqus_identifier = '2018/12/16/MoreEffectiveCSharp/';
+var disqus_title = 'More Effective CSharp Notes';
+var disqus_url = 'http://zongwenlong.github.io/2018/12/16/MoreEffectiveCSharp/';
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//http-zongwenlong-github-io.disqus.com/count.js" async></script></div></div></div></div><div class="pure-u-1-4"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Technology/">Technology</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/多线程/" style="font-size: 15px;">多线程</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Sort/" style="font-size: 15px;">Sort</a> <a href="/tags/设计模式/" style="font-size: 15px;">设计模式</a> <a href="/tags/Docker/" style="font-size: 15px;">Docker</a> <a href="/tags/C/" style="font-size: 15px;">C#</a> <a href="/tags/编程语言/" style="font-size: 15px;">编程语言</a> <a href="/tags/RESTful/" style="font-size: 15px;">RESTful</a> <a href="/tags/Cache/" style="font-size: 15px;">Cache</a> <a href="/tags/分布式/" style="font-size: 15px;">分布式</a> <a href="/tags/并发/" style="font-size: 15px;">并发</a> <a href="/tags/源码阅读/" style="font-size: 15px;">源码阅读</a> <a href="/tags/阳光灿烂/" style="font-size: 15px;">阳光灿烂</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/LaTeX/" style="font-size: 15px;">LaTeX</a> <a href="/tags/WordPress/" style="font-size: 15px;">WordPress</a> <a href="/tags/容器/" style="font-size: 15px;">容器</a> <a href="/tags/团队分享/" style="font-size: 15px;">团队分享</a> <a href="/tags/算法/" style="font-size: 15px;">算法</a> <a href="/tags/动态规划/" style="font-size: 15px;">动态规划</a> <a href="/tags/图搜索/" style="font-size: 15px;">图搜索</a> <a href="/tags/西藏/" style="font-size: 15px;">西藏</a> <a href="/tags/旅游/" style="font-size: 15px;">旅游</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/16/MoreEffectiveCSharp/">More Effective CSharp Notes</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/01/CSharpRampUp/">C# Ramp Up</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/14/latex-start/">LaTeX 学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/06/03/yangguangcanlan/">在这阳光灿烂的日子里</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/26/ReadingNotes-JavaConcurrencyInPractice/">读书笔记-《Java并发编程实战》</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/06/Java-SourceCode-Sort/">Java源码阅读-DualPivotQuicksort</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/Docker-常用命令/">Docker 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/07/利用Docker快速搭建WordPress博客/">利用Docker快速搭建WordPress博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/18/RESTful-SpringMVC-Swagger-Demo/">RESTful SpringMVC Swagger Demo</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/09/03/西藏游记（六人七天）/">西藏游记（六人七天）</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> 最近评论</i></div><script type="text/javascript" src="//http-zongwenlong-github-io.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://github.com/" title="GitHub" target="_blank">GitHub</a><ul></ul><a href="https://www.haomwei.com/technology/maupassant-hexo.html" title="Maupassant" target="_blank">Maupassant</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">All is well.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-77720589-1','auto');ga('send','pageview');
+</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?28aa9a092a9c1d26ba2a3b5d6f2c7c60";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
